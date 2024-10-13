@@ -1,0 +1,359 @@
+<html><head><base href="https://bean727.github.io">
+<!-- Title of the webpage -->
+<title>Bean727's GitHub Page</title>
+<!-- CSS styles for the page -->
+<style>
+/* Root variables for color scheme */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #3498db;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --footer-text: #fff;
+    --project-bg: #fff;
+    --project-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode color scheme */
+.dark-mode {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --background-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --footer-text: #f4f4f4;
+    --project-bg: #2c3e50;
+    --project-shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for main content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+    flex-grow: 1;
+}
+
+/* Header styles */
+header {
+    background: var(--secondary-color);
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Main content area styles */
+.content {
+    padding: 20px 0;
+}
+
+/* Grid layout for projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual project card styles */
+.project {
+    background: var(--project-bg);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--project-shadow);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.project-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.project a {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+    background: var(--primary-color);
+}
+
+/* Footer styles */
+footer {
+    background: var(--secondary-color);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Dark mode toggle button styles */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+</style>
+</head>
+<body>
+<!-- Header section -->
+<header>
+    <div class="container">
+        <h1>Welcome to Bean727's GitHub Page</h1>
+    </div>
+</header>
+
+<!-- Dark mode toggle button -->
+<button class="dark-mode-toggle" id="darkModeToggle">Toggle Dark Mode</button>
+
+<!-- Main content container -->
+<div class="container">
+    <div class="content">
+        <!-- About Me section -->
+        <h2>About Me</h2>
+        <p>Hello! I'm Bean727, a passionate developer exploring the world of code and creating interesting projects. This page serves as a portfolio of my work and a gateway to my GitHub repositories.</p>
+        
+        <!-- Projects section -->
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <!-- WeatherNow project -->
+            <div class="project">
+                <h3>WeatherNow</h3>
+                <p class="project-title">Weather App</p>
+                <p>A sleek and user-friendly weather application that provides real-time weather information for any location.</p>
+                <a href="https://github.com/bean727/weather-app">View</a>
+            </div>
+            
+            <!-- TaskMaster project -->
+            <div class="project">
+                <h3>TaskMaster</h3>
+                <p class="project-title">Task Manager</p>
+                <p>An efficient task management system to help you organize your daily activities and boost productivity.</p>
+                <a href="https://github.com/bean727/task-manager">View</a>
+            </div>
+            
+            <!-- PokéCard Finder project -->
+            <div class="project">
+                <h3>PokéCard Finder</h3>
+                <p class="project-title">Pokémon Card Database</p>
+                <p>A comprehensive tool for Pokémon card enthusiasts to search, discover, and track their favorite cards from various sets.</p>
+                <a href="https://github.com/bean727/pokecard-finder">View</a>
+            </div>
+
+            <!-- Scribble project -->
+            <div class="project">
+                <h3>Scribble</h3>
+                <p class="project-title">Blog Platform</p>
+                <p>A minimalist yet powerful blogging platform for writers and content creators.</p>
+                <a href="https://github.com/bean727/blog-platform">View</a>
+            </div>
+
+            <!-- FitTrack project -->
+            <div class="project">
+                <h3>FitTrack</h3>
+                <p class="project-title">Fitness Tracker</p>
+                <p>Track your workouts, set goals, and monitor your progress with this comprehensive fitness app.</p>
+                <a href="https://github.com/bean727/fitness-tracker">View</a>
+            </div>
+
+            <!-- CinemaVault project -->
+            <div class="project">
+                <h3>CinemaVault</h3>
+                <p class="project-title">Movie Database</p>
+                <p>Browse, search, and discover information about your favorite movies and TV shows.</p>
+                <a href="https://github.com/bean727/movie-database">View</a>
+            </div>
+        </div>
+
+        <!-- Project Gallery section -->
+        <h2>Project Gallery</h2>
+        <div class="gallery">
+            <!-- WeatherNow gallery item -->
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1018/600/400" alt="Scenic mountain landscape with a lake in the foreground" width="600" height="400">
+                <div class="gallery-caption">WeatherNow App Interface</div>
+            </div>
+            <!-- TaskMaster gallery item -->
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1015/600/400" alt="River flowing through a forest" width="600" height="400">
+                <div class="gallery-caption">TaskMaster Dashboard</div>
+            </div>
+            <!-- PokéCard Finder gallery item -->
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1037/600/400" alt="Colorful hot air balloons in the sky" width="600" height="400">
+                <div class="gallery-caption">PokéCard Finder Search Results</div>
+            </div>
+            <!-- Scribble gallery item -->
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1002/600/400" alt="A desk with a laptop, notebook, and coffee mug" width="600" height="400">
+                <div class="gallery-caption">Scribble Blog Editor</div>
+            </div>
+            <!-- FitTrack gallery item -->
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1035/600/400" alt="Person doing yoga on a beach at sunset" width="600" height="400">
+                <div class="gallery-caption">FitTrack Workout Session</div>
+            </div>
+            <!-- CinemaVault gallery item -->
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1033/600/400" alt="Old film projector with reels" width="600" height="400">
+                <div class="gallery-caption">CinemaVault Movie Details</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer section -->
+<footer>
+    <p>© 2023 Bean727. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript for page interactivity -->
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Add a subtle animation to project divs
+    const projects = document.querySelectorAll('.project');
+    projects.forEach((project, index) => {
+        project.style.opacity = '0';
+        project.style.transform = 'translateY(20px)';
+        project.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        setTimeout(() => {
+            project.style.opacity = '1';
+            project.style.transform = 'translateY(0)';
+        }, 100 * (index + 1));
+    });
+
+    // Add hover effect to project links
+    const projectLinks = document.querySelectorAll('.project a');
+    projectLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.style.transition = 'all 0.3s ease';
+            link.style.transform = 'scale(1.1)';
+        });
+        link.addEventListener('mouseout', () => {
+            link.style.transform = 'scale(1)';
+        });
+    });
+
+    // Dark mode toggle functionality
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            darkModeToggle.textContent = 'Toggle Light Mode';
+        } else {
+            darkModeToggle.textContent = 'Toggle Dark Mode';
+        }
+    });
+
+    // Add animation to gallery items
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }, 100 * (index + 1));
+    });
+});
+</script>
+
+</body></html>
