@@ -1,34 +1,13 @@
 # Site settings
 title: Bean727's Website
-description: A simple, highly customizable website for Bean727
+description: A highly customizable website for Bean727
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bean727.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
-permalink: /:title/
+theme: minima
 
-# Customizable settings
-colors:
-  primary: "#3498db"
-  secondary: "#f1c40f"
-  background: "#f9f9f9"
-
-fonts:
-  body: "Open Sans"
-  heading: "Montserrat"
-
-# Navigation
-nav:
-  - title: Home
-    url: /
-  - title: About
-    url: /about
-  - title: Contact
-    url: /contact
-
-# Social media links
-social:
-  - title: GitHub
-    url: https://github.com/bean727
+# Custom settings
+custom_css: css/custom.css
+custom_js: js/custom.js
