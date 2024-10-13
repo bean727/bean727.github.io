@@ -1,3 +1,27 @@
-theme: jekyll-theme-minimal
-title: bean727's homepage
-description: This is a text box.
+name: Bean727 Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Build and deploy
+        env:
+          JEKYLL_ENV: production
+        run: |
+          npm run build
+          git config --global user.name "Bean727"
+          git config --global user.email "bean727@example.com"
+          git remote add origin https://github.com/bean727/bean727.github.io.git
+          git push --force origin main:gh-pages
